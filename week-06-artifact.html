@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Week 6: Holy Anger | Known + Loved Coaching</title>
+<meta name="description" content="Week 6 interactive tool — Holy Anger. Known + Loved Coaching with Kate."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --c:  #3D6B3D;
+  --bg: #EDF4ED;
+  --lt: #C8DAC8;
+  --brown: #2C2420;
+  --mid:   #5A4A40;
+  --light: #8A7A70;
+  --cream: #FAF7F2;
+  --card:  #FFFFFF;
+  --border:#E2D9CF;
+  --font-display:"Cormorant Garamond",Georgia,serif;
+  --font-body:"Jost",sans-serif;
+}
+html{font-size:16px;scroll-behavior:smooth}
+body{background:var(--cream);color:var(--brown);font-family:var(--font-body);font-weight:400;line-height:1.6;min-height:100vh}
+body::before{content:"";position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse 60% 40% at 15% 0%,rgba(184,146,74,.07) 0%,transparent 60%),radial-gradient(ellipse 50% 50% at 85% 90%,color-mix(in srgb,#3D6B3D 8%,transparent) 0%,transparent 60%);pointer-events:none}
+.wrap{position:relative;z-index:1;max-width:700px;margin:0 auto;padding:0 20px 80px}
+
+/* Header */
+.site-header{text-align:center;padding:40px 0 28px;animation:fadeDown .6s ease both}
+.brand{font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--c);display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:20px}
+.brand::before,.brand::after{content:"";flex-shrink:0;display:block;width:24px;height:1px;background:var(--c)}
+.phase-tag{display:inline-flex;align-items:center;gap:6px;background:var(--bg);border:1.5px solid var(--c);border-radius:40px;padding:4px 14px;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--c);margin-bottom:16px}
+h1{font-family:var(--font-display);font-size:clamp(28px,5vw,44px);font-weight:400;line-height:1.15;color:var(--brown);margin-bottom:10px}
+.theme{font-size:14px;color:var(--mid);font-style:italic;margin-bottom:10px;font-weight:300}
+.scripture-header{font-family:var(--font-display);font-size:16px;color:var(--c);font-style:italic;border-left:3px solid var(--c);padding:8px 14px;background:var(--bg);border-radius:0 8px 8px 0;display:inline-block;margin:0 auto;text-align:left}
+
+/* Card */
+.card{background:var(--card);border:1.5px solid var(--border);border-radius:16px;padding:28px;box-shadow:0 4px 28px rgba(44,36,32,.09);margin-bottom:16px;animation:fadeUp .45s ease both}
+.card-title{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--c);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.card-title::after{content:"";flex:1;height:1px;background:var(--lt)}
+
+/* Inputs */
+input,textarea{font-family:var(--font-body);font-size:13px;color:var(--brown);background:var(--cream);border:1.5px solid var(--border);border-radius:8px;padding:9px 12px;outline:none;width:100%;transition:border-color .2s}
+input:focus,textarea:focus{border-color:var(--c)}
+textarea{resize:vertical;line-height:1.6}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-body);font-size:13px;font-weight:500;border:none;border-radius:40px;padding:10px 22px;cursor:pointer;transition:all .2s}
+.btn-primary{background:var(--c);color:#fff}
+.btn-primary:hover{opacity:.9;transform:translateY(-1px)}
+.btn-primary:disabled{background:var(--border);color:var(--light);cursor:not-allowed;transform:none}
+.btn-ghost{background:transparent;border:1.5px solid var(--border);color:var(--mid)}
+.btn-ghost:hover{border-color:var(--c);color:var(--brown)}
+.btn-tag{background:var(--cream);border:1.5px solid var(--border);border-radius:20px;padding:5px 12px;font-size:12px;cursor:pointer;color:var(--mid);transition:all .15s;font-family:var(--font-body)}
+.btn-tag:hover,.btn-tag.active{background:var(--bg);border-color:var(--c);color:var(--brown);font-weight:600}
+.btn-tag.selected{background:var(--c);border-color:var(--c);color:#fff;font-weight:600}
+
+/* Range */
+input[type=range]{-webkit-appearance:none;appearance:none;height:6px;border-radius:3px;background:var(--border);padding:0}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--c);cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+
+/* Footer */
+.site-footer{text-align:center;padding:24px 0 8px;font-size:11px;color:var(--light);border-top:1px solid var(--border);margin-top:32px;letter-spacing:.5px}
+.site-footer strong{color:var(--c);font-weight:500}
+
+/* Animations */
+@keyframes fadeDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site-header">
+    <div class="brand">Known + Loved Coaching</div>
+    <div class="phase-tag">Phase — Processing &nbsp;·&nbsp; Week 6 of 12</div>
+    <h1>Holy Anger</h1>
+    <p class="theme">Righteous Indignation & Boundaries</p>
+    <div style="display:flex;justify-content:center">
+      <div class="scripture-header">"Be angry, and do not sin." — Ephesians 4:26</div>
+    </div>
+  </header>
+
+  <div id="app"></div>
+
+  <footer class="site-footer">
+    <strong>Known + Loved Coaching</strong> · knownlovedcoaching.com<br/>
+    <span style="margin-top:4px;display:block">"He heals the brokenhearted and binds up their wounds." — Psalm 147:3</span>
+  </footer>
+</div>
+<script>
+
+const C="#3D6B3D",BG="#EDF4ED",BROWN="#2C2420",MID="#5A4A40",LIGHT="#8A7A70",CREAM="#FAF7F2",CARD="#FFF",BORDER="#E2D9CF";
+const PRACTICES=[
+  {name:"Isometric Pressing",desc:"Press palms together hard for 10 seconds, then release. Notice the discharge.",icon:"🤲"},
+  {name:"Stomping",desc:"Stand firm. Stamp both feet on the floor firmly. Feel the ground beneath you.",icon:"🦶"},
+  {name:"Lion's Breath",desc:"Inhale deeply, exhale forcefully with mouth wide open, tongue extended, eyes wide.",icon:"🦁"},
+  {name:"Jaw Release",desc:"Unclench your jaw. Widen your mouth. Yawn widely. Let sound come out.",icon:"😤"},
+  {name:"Isometric Push",desc:"Stand facing a wall, press both hands against it firmly for 30 seconds.",icon:"💪"},
+  {name:"Vocal Release",desc:"In private, let out a sound — a groan, a roar, a firm 'NO'. Let it be real.",icon:"🎙️"},
+];
+let tried={}, rating={};
+
+function render(){
+  document.getElementById("app").innerHTML=`
+  <div class="card">
+    <div class="card-title">✦ Anger Discharge Menu</div>
+    <p style="color:${MID};font-size:13px;margin-bottom:18px">Anger is information, not sin. Try at least two practices this week. Log which helped and rate it.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px">
+      ${PRACTICES.map((p,i)=>`
+        <div style="background:${tried[i]?BG:CREAM};border:1.5px solid ${tried[i]?C:BORDER};border-radius:10px;padding:14px">
+          <div style="display:flex;gap:8px;align-items:flex-start;margin-bottom:8px">
+            <span style="font-size:22px">${p.icon}</span>
+            <div>
+              <p style="font-size:13px;font-weight:700;color:${BROWN};margin:0 0 3px">${p.name}</p>
+              <p style="font-size:12px;color:${MID};margin:0;line-height:1.4">${p.desc}</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <button onclick="toggleTried(${i})" style="background:${tried[i]?C:'transparent'};color:${tried[i]?'#fff':MID};border:1.5px solid ${tried[i]?C:BORDER};border-radius:6px;padding:5px 10px;cursor:pointer;font-size:12px;font-weight:600;font-family:Jost,sans-serif">
+              ${tried[i]?'✓ Tried':'Mark as tried'}
+            </button>
+            ${tried[i]?`<div style="display:flex;gap:3px">${[1,2,3,4,5].map(s=>`<span onclick="setRating(${i},${s})" style="cursor:pointer;font-size:18px;color:${(rating[i]||0)>=s?C:BORDER}">★</span>`).join('')}</div>`:''}
+          </div>
+        </div>`).join('')}
+    </div>
+    ${Object.keys(tried).filter(k=>tried[k]).length>0?`
+      <div style="background:${BG};border-radius:8px;padding:12px 14px">
+        <p style="font-size:12px;color:${C};font-weight:700;margin:0 0 4px">Your toolkit so far:</p>
+        <p style="font-size:12px;color:${MID};margin:0">${Object.keys(tried).filter(k=>tried[k]).map(k=>PRACTICES[k].name).join(' · ')}</p>
+      </div>`:''}
+  </div>`;
+}
+function toggleTried(i){tried[i]=!tried[i];render();}
+function setRating(i,s){rating[i]=s;render();}
+render();
+
+</script>
+</body>
+</html>

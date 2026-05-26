@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Week 4: The Body Keeps the Score | Known + Loved Coaching</title>
+<meta name="description" content="Week 4 interactive tool — The Body Keeps the Score. Known + Loved Coaching with Kate."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --c:  #3D6B3D;
+  --bg: #EDF4ED;
+  --lt: #C8DAC8;
+  --brown: #2C2420;
+  --mid:   #5A4A40;
+  --light: #8A7A70;
+  --cream: #FAF7F2;
+  --card:  #FFFFFF;
+  --border:#E2D9CF;
+  --font-display:"Cormorant Garamond",Georgia,serif;
+  --font-body:"Jost",sans-serif;
+}
+html{font-size:16px;scroll-behavior:smooth}
+body{background:var(--cream);color:var(--brown);font-family:var(--font-body);font-weight:400;line-height:1.6;min-height:100vh}
+body::before{content:"";position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse 60% 40% at 15% 0%,rgba(184,146,74,.07) 0%,transparent 60%),radial-gradient(ellipse 50% 50% at 85% 90%,color-mix(in srgb,#3D6B3D 8%,transparent) 0%,transparent 60%);pointer-events:none}
+.wrap{position:relative;z-index:1;max-width:700px;margin:0 auto;padding:0 20px 80px}
+
+/* Header */
+.site-header{text-align:center;padding:40px 0 28px;animation:fadeDown .6s ease both}
+.brand{font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--c);display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:20px}
+.brand::before,.brand::after{content:"";flex-shrink:0;display:block;width:24px;height:1px;background:var(--c)}
+.phase-tag{display:inline-flex;align-items:center;gap:6px;background:var(--bg);border:1.5px solid var(--c);border-radius:40px;padding:4px 14px;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--c);margin-bottom:16px}
+h1{font-family:var(--font-display);font-size:clamp(28px,5vw,44px);font-weight:400;line-height:1.15;color:var(--brown);margin-bottom:10px}
+.theme{font-size:14px;color:var(--mid);font-style:italic;margin-bottom:10px;font-weight:300}
+.scripture-header{font-family:var(--font-display);font-size:16px;color:var(--c);font-style:italic;border-left:3px solid var(--c);padding:8px 14px;background:var(--bg);border-radius:0 8px 8px 0;display:inline-block;margin:0 auto;text-align:left}
+
+/* Card */
+.card{background:var(--card);border:1.5px solid var(--border);border-radius:16px;padding:28px;box-shadow:0 4px 28px rgba(44,36,32,.09);margin-bottom:16px;animation:fadeUp .45s ease both}
+.card-title{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--c);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.card-title::after{content:"";flex:1;height:1px;background:var(--lt)}
+
+/* Inputs */
+input,textarea{font-family:var(--font-body);font-size:13px;color:var(--brown);background:var(--cream);border:1.5px solid var(--border);border-radius:8px;padding:9px 12px;outline:none;width:100%;transition:border-color .2s}
+input:focus,textarea:focus{border-color:var(--c)}
+textarea{resize:vertical;line-height:1.6}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-body);font-size:13px;font-weight:500;border:none;border-radius:40px;padding:10px 22px;cursor:pointer;transition:all .2s}
+.btn-primary{background:var(--c);color:#fff}
+.btn-primary:hover{opacity:.9;transform:translateY(-1px)}
+.btn-primary:disabled{background:var(--border);color:var(--light);cursor:not-allowed;transform:none}
+.btn-ghost{background:transparent;border:1.5px solid var(--border);color:var(--mid)}
+.btn-ghost:hover{border-color:var(--c);color:var(--brown)}
+.btn-tag{background:var(--cream);border:1.5px solid var(--border);border-radius:20px;padding:5px 12px;font-size:12px;cursor:pointer;color:var(--mid);transition:all .15s;font-family:var(--font-body)}
+.btn-tag:hover,.btn-tag.active{background:var(--bg);border-color:var(--c);color:var(--brown);font-weight:600}
+.btn-tag.selected{background:var(--c);border-color:var(--c);color:#fff;font-weight:600}
+
+/* Range */
+input[type=range]{-webkit-appearance:none;appearance:none;height:6px;border-radius:3px;background:var(--border);padding:0}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--c);cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+
+/* Footer */
+.site-footer{text-align:center;padding:24px 0 8px;font-size:11px;color:var(--light);border-top:1px solid var(--border);margin-top:32px;letter-spacing:.5px}
+.site-footer strong{color:var(--c);font-weight:500}
+
+/* Animations */
+@keyframes fadeDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site-header">
+    <div class="brand">Known + Loved Coaching</div>
+    <div class="phase-tag">Phase — Processing &nbsp;·&nbsp; Week 4 of 12</div>
+    <h1>The Body Keeps the Score</h1>
+    <p class="theme">Sacred Soma — Your Body as Temple</p>
+    <div style="display:flex;justify-content:center">
+      <div class="scripture-header">"Your bodies are temples of the Holy Spirit." — 1 Cor 6:19</div>
+    </div>
+  </header>
+
+  <div id="app"></div>
+
+  <footer class="site-footer">
+    <strong>Known + Loved Coaching</strong> · knownlovedcoaching.com<br/>
+    <span style="margin-top:4px;display:block">"He heals the brokenhearted and binds up their wounds." — Psalm 147:3</span>
+  </footer>
+</div>
+<script>
+
+const C="#3D6B3D",BG="#EDF4ED",BROWN="#2C2420",MID="#5A4A40",LIGHT="#8A7A70",CREAM="#FAF7F2",CARD="#FFF",BORDER="#E2D9CF";
+const WORDS=["tight","heavy","hollow","buzzy","warm","cold","numb","frozen","tingly","shaky","fluttery","constricted","expansive","light","achy","pulsing","tender","still","electric","nauseated"];
+let selected=[], dict={}, editing=null, defn="", custom="";
+
+function render(){
+  const allWords=[...WORDS,...Object.keys(dict).filter(k=>!WORDS.includes(k))];
+  document.getElementById("app").innerHTML=`
+  <div class="card">
+    <div class="card-title">✦ Sensation Vocabulary Builder</div>
+    <p style="color:${MID};font-size:13px;margin-bottom:14px">Select words that describe what you feel in your body. Click a word to write your personal definition of it.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px">
+      ${allWords.map(w=>`<button onclick="toggleWord('${w}')" class="btn-tag ${selected.includes(w)?'selected':''}">${w}</button>`).join('')}
+    </div>
+    <div style="display:flex;gap:8px;margin-bottom:16px">
+      <input value="${custom.replace(/"/g,'&quot;')}" oninput="custom=this.value" placeholder="Add your own word…"/>
+      <button class="btn btn-primary" onclick="addCustom()" style="white-space:nowrap;flex-shrink:0">Add</button>
+    </div>
+    ${editing?`
+      <div style="background:${BG};border-radius:10px;padding:14px;border:1px solid ${C}44;margin-bottom:14px">
+        <p style="font-size:12px;font-weight:700;color:${C};margin-bottom:8px">"${editing}" — what does this feel like for you?</p>
+        <textarea rows="2" placeholder="Describe where you feel it, when it happens, what it means…" oninput="defn=this.value" style="margin-bottom:8px">${(defn||'').replace(/</g,'&lt;')}</textarea>
+        <button class="btn btn-primary" onclick="saveDefn()">Save to My Dictionary</button>
+      </div>`:'' }
+    ${Object.entries(dict).filter(([,v])=>v).length>0?`
+      <div>
+        <p style="font-size:11px;color:${MID};letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">My Somatic Dictionary</p>
+        ${Object.entries(dict).filter(([,v])=>v).map(([k,v])=>`
+          <div style="display:flex;gap:10px;margin-bottom:7px;background:${CREAM};border-radius:6px;padding:8px 11px">
+            <span style="color:${C};font-weight:700;font-size:12px;flex-shrink:0">${k}</span>
+            <span style="color:${MID};font-size:12px;line-height:1.4">${v}</span>
+          </div>`).join('')}
+      </div>`:''}
+  </div>`;
+}
+function toggleWord(w){
+  if(selected.includes(w))selected=selected.filter(x=>x!==w);else selected.push(w);
+  editing=w;defn=dict[w]||'';render();
+}
+function addCustom(){if(!custom.trim())return;if(!dict[custom.trim()])dict[custom.trim()]='';selected.push(custom.trim());editing=custom.trim();defn='';custom='';render();}
+function saveDefn(){if(editing)dict[editing]=defn;editing=null;render();}
+render();
+
+</script>
+</body>
+</html>
