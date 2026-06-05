@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Free Handouts — First Steps to Freedom | Known + Loved Coaching</title>
+<meta name="description" content="Download your free weekly handouts for the First Steps to Freedom mini course. Faith-based healing from narcissistic abuse. Known + Loved Coaching with Kate."/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+
+:root{
+  --cream:   #FAF7F2;
+  --cream2:  #F3EDE3;
+  --brown:   #2C2420;
+  --gold:    #B8924A;
+  --gold2:   #C9A056;
+  --gold-lt: #F0E0C4;
+  --gold-bg: #FBF5EB;
+  --mid:     #5A4A40;
+  --light:   #8A7A70;
+  --border:  #E2D5C4;
+  --white:   #FFFFFF;
+
+  /* phase colours */
+  --p1: #8B6914; --p1-lt: #FBF5E8; --p1-bd: #E8D5A8;
+  --p2: #3D6B3D; --p2-lt: #EDF4ED; --p2-bd: #B8D4B8;
+  --p3: #2E5F7A; --p3-lt: #EAF2F7; --p3-bd: #A8C8DC;
+  --p4: #6B3D6B; --p4-lt: #F4EDF4; --p4-bd: #C8A8C8;
+
+  --display: 'Cormorant Garamond', Georgia, serif;
+  --body:    'Jost', sans-serif;
+}
+
+body{
+  background: var(--cream);
+  color: var(--brown);
+  font-family: var(--body);
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── Parchment texture overlay ── */
+body::before{
+  content:'';
+  position:fixed;inset:0;z-index:0;
+  background:
+    radial-gradient(ellipse 70% 50% at 8% 0%, rgba(184,146,74,0.09) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 55% at 92% 95%, rgba(61,107,61,0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 35% at 50% 50%, rgba(184,146,74,0.04) 0%, transparent 65%);
+  pointer-events:none;
+}
+
+.page{position:relative;z-index:1}
+
+/* ── NAV ── */
+.nav{
+  padding:18px 28px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--border);
+  background:rgba(250,247,242,0.94);
+  backdrop-filter:blur(14px);
+  position:sticky;top:0;z-index:100;
+  animation:fadeDown 0.55s ease both;
+}
+.nav-brand{
+  font-family:var(--display);
+  font-size:18px;font-weight:400;color:var(--brown);
+}
+.nav-brand em{font-style:italic;color:var(--gold)}
+.nav-link{
+  font-size:12px;font-weight:500;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--light);
+  text-decoration:none;
+  transition:color 0.2s;
+}
+.nav-link:hover{color:var(--gold)}
+
+/* ── HERO ── */
+.hero{
+  padding:72px 24px 56px;
+  text-align:center;
+  max-width:680px;
+  margin:0 auto;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:10px;font-weight:600;letter-spacing:3px;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:24px;
+  opacity:0;animation:fadeUp 0.65s 0.1s ease forwards;
+}
+.hero-eyebrow::before,.hero-eyebrow::after{content:'✦';font-size:7px}
+
+.hero h1{
+  font-family:var(--display);
+  font-size:clamp(38px,7vw,64px);
+  font-weight:300;line-height:1.1;
+  color:var(--brown);
+  margin-bottom:8px;
+  opacity:0;animation:fadeUp 0.65s 0.22s ease forwards;
+}
+.hero h1 em{
+  font-style:italic;color:var(--gold);display:block;
+}
+.hero-sub{
+  font-family:var(--display);
+  font-size:clamp(16px,2.8vw,20px);
+  font-weight:300;font-style:italic;
+  color:var(--mid);
+  max-width:480px;margin:18px auto 28px;
+  line-height:1.6;
+  opacity:0;animation:fadeUp 0.65s 0.34s ease forwards;
+}
+.hero-rule{
+  display:flex;align-items:center;gap:14px;
+  max-width:320px;margin:0 auto 28px;
+  opacity:0;animation:fadeUp 0.65s 0.46s ease forwards;
+}
+.hero-rule::before,.hero-rule::after{
+  content:'';flex:1;height:1px;background:var(--border);
+}
+.hero-rule span{
+  font-size:11px;letter-spacing:2px;color:var(--gold);flex-shrink:0;
+}
+.hero-scripture{
+  font-family:var(--display);
+  font-size:14px;font-style:italic;color:var(--gold);
+  opacity:0;animation:fadeUp 0.65s 0.56s ease forwards;
+}
+
+/* ── INSTRUCTIONS BANNER ── */
+.instructions{
+  background:var(--brown);
+  padding:18px 28px;
+  text-align:center;
+  opacity:0;animation:fadeUp 0.65s 0.66s ease forwards;
+}
+.instructions p{
+  font-size:13px;color:rgba(250,247,242,0.75);
+  font-weight:300;letter-spacing:0.3px;
+}
+.instructions strong{color:var(--gold);font-weight:500}
+
+/* ── MAIN GRID ── */
+.grid-wrap{
+  max-width:1060px;
+  margin:0 auto;
+  padding:52px 24px 80px;
+}
+
+/* ── PHASE SECTION ── */
+.phase-section{margin-bottom:56px}
+.phase-header{
+  display:flex;align-items:center;gap:14px;
+  margin-bottom:24px;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--border);
+}
+.phase-dot{
+  width:10px;height:10px;border-radius:50%;flex-shrink:0;
+}
+.phase-label-text{
+  font-size:9px;font-weight:700;letter-spacing:3.5px;
+  text-transform:uppercase;
+}
+.phase-name{
+  font-family:var(--display);
+  font-size:26px;font-weight:400;color:var(--brown);
+}
+.phase-weeks-count{
+  margin-left:auto;font-size:11px;color:var(--light);
+  letter-spacing:1px;
+}
+
+/* ── WEEK CARDS ── */
+.weeks-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(280px,1fr));
+  gap:14px;
+}
+
+.week-card{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 2px 16px rgba(44,36,32,0.06);
+  transition:transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  display:flex;flex-direction:column;
+  opacity:0;transform:translateY(18px);
+}
+.week-card.visible{
+  opacity:1;transform:translateY(0);
+  transition:opacity 0.5s ease, transform 0.5s ease,
+             box-shadow 0.22s ease, border-color 0.22s ease;
+}
+.week-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 36px rgba(44,36,32,0.12);
+}
+
+/* Phase colour top strip */
+.week-card-strip{
+  height:4px;width:100%;
+}
+
+.week-card-body{
+  padding:20px 20px 16px;
+  flex:1;display:flex;flex-direction:column;
+}
+.week-num{
+  font-size:10px;font-weight:600;letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.week-title{
+  font-family:var(--display);
+  font-size:18px;font-weight:500;color:var(--brown);
+  line-height:1.25;margin-bottom:5px;
+}
+.week-theme{
+  font-family:var(--display);
+  font-size:13px;font-style:italic;color:var(--light);
+  margin-bottom:12px;
+}
+.week-scripture{
+  font-size:11px;font-style:italic;
+  line-height:1.5;
+  padding:8px 10px;
+  border-radius:6px;
+  margin-bottom:16px;
+  flex:1;
+}
+
+/* Download button */
+.week-card-footer{
+  padding:0 20px 18px;
+}
+.btn-download{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;
+  border:none;border-radius:8px;padding:11px 16px;
+  font-family:var(--body);font-size:13px;font-weight:600;
+  letter-spacing:0.3px;
+  cursor:pointer;text-decoration:none;
+  transition:all 0.2s ease;
+}
+.btn-download svg{
+  width:15px;height:15px;flex-shrink:0;
+  transition:transform 0.2s ease;
+}
+.btn-download:hover svg{transform:translateY(2px)}
+
+/* ── UPGRADE BANNER ── */
+.upgrade{
+  max-width:760px;
+  margin:0 auto;
+  padding:0 24px 80px;
+}
+.upgrade-card{
+  background:var(--brown);
+  border-radius:20px;
+  padding:48px 40px;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+@media(max-width:560px){.upgrade-card{padding:32px 22px}}
+.upgrade-card::before{
+  content:'';
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 50% 0%, rgba(184,146,74,0.12) 0%, transparent 70%);
+  pointer-events:none;
+}
+.upgrade-card::after{
+  content:'';
+  position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+}
+.upgrade-ornament{
+  font-size:11px;font-weight:600;letter-spacing:3px;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:14px;position:relative;z-index:1;display:block;
+}
+.upgrade-card h2{
+  font-family:var(--display);
+  font-size:clamp(26px,5vw,40px);
+  font-weight:300;color:var(--white);
+  margin-bottom:12px;
+  position:relative;z-index:1;
+}
+.upgrade-card h2 em{font-style:italic;color:var(--gold)}
+.upgrade-card p{
+  font-size:14px;color:rgba(250,247,242,0.7);
+  font-weight:300;max-width:460px;
+  margin:0 auto 28px;line-height:1.75;
+  position:relative;z-index:1;
+}
+.btn-upgrade{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--gold);color:var(--white);
+  border:none;border-radius:40px;
+  padding:15px 40px;
+  font-family:var(--body);font-size:14px;font-weight:600;
+  letter-spacing:0.5px;cursor:pointer;text-decoration:none;
+  box-shadow:0 6px 28px rgba(184,146,74,0.35);
+  transition:all 0.22s ease;
+  position:relative;z-index:1;
+}
+.btn-upgrade:hover{
+  background:var(--gold2);
+  transform:translateY(-2px);
+  box-shadow:0 10px 40px rgba(184,146,74,0.45);
+}
+.upgrade-price{
+  display:block;font-size:12px;
+  color:rgba(250,247,242,0.4);
+  margin-top:14px;
+  position:relative;z-index:1;
+}
+
+/* ── FOOTER ── */
+footer{
+  border-top:1px solid var(--border);
+  padding:24px;
+  text-align:center;
+  font-size:12px;color:var(--light);
+}
+footer a{color:var(--gold);text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(18px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .weeks-grid{grid-template-columns:1fr}
+  .phase-header{flex-wrap:wrap;gap:8px}
+  .phase-weeks-count{margin-left:0}
+}
+
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--cream)}
+::-webkit-scrollbar-thumb{background:var(--gold-lt);border-radius:3px}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-brand">Known + Loved <em>Coaching</em></div>
+  <a href="https://skool.com/known-and-loved-coaching-4236/about" class="nav-link">Join Free Community →</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-eyebrow">Free Resource Library</div>
+  <h1>First Steps<em>to Freedom</em></h1>
+  <p class="hero-sub">Your free weekly handouts for the faith-based mini course on healing from narcissistic and emotional abuse.</p>
+  <div class="hero-rule"><span>✦</span></div>
+  <p class="hero-scripture">"He heals the brokenhearted and binds up their wounds." — Psalm 147:3</p>
+</header>
+
+<!-- INSTRUCTIONS -->
+<div class="instructions">
+  <p>Click <strong>Download Handout</strong> on any week to save your PDF. Each handout includes key concepts, somatic practices, journal prompts, and a between-session practice.</p>
+</div>
+
+<!-- HANDOUT GRID -->
+<main class="grid-wrap">
+
+  <!-- PHASE 1 -->
+  <section class="phase-section">
+    <div class="phase-header">
+      <div class="phase-dot" style="background:var(--p1)"></div>
+      <div>
+        <div class="phase-label-text" style="color:var(--p1)">Phase 1</div>
+        <div class="phase-name">Foundation</div>
+      </div>
+      <div class="phase-weeks-count">Weeks 1 – 3</div>
+    </div>
+    <div class="weeks-grid">
+
+      <div class="week-card">
+        <div class="week-card-strip" style="background:var(--p1)"></div>
+        <div class="week-card-body">
+          <div class="week-num" style="color:var(--p1)">Week 1</div>
+          <div class="week-title">Understanding What Happened to You</div>
+          <div class="week-theme">Truth-Telling &amp; Sacred Safety</div>
+          <div class="week-scripture" style="background:var(--p1-lt);color:var(--p1)">"The truth will set you free." — John 8:32</div>
+        </div>
+        <div class="week-card-footer">
+          <a href="Week-01-Handout.pdf" download class="btn-download" style="background:var(--p1-lt);color:var(--p1)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Handout
+          </a>
+        </div>
+      </div>
+
+      <div class="week-card">
+        <div class="week-card-strip" style="background:var(--p1)"></div>
+        <div class="week-card-body">
+          <div class="week-num" style="color:var(--p1)">Week 2</div>
+          <div class="week-title">Naming the Harm</div>
+          <div class="week-theme">Validation &amp; God-Given Clarity</div>
+          <div class="week-scripture" style="background:var(--p1-lt);color:var(--p1)">"He heals the brokenhearted and binds up their wounds." — Psalm 147:3</div>
+        </div>
+        <div class="week-card-footer">
+          <a href="Week-02-Handout.pdf" download class="btn-download" style="background:var(--p1-lt);color:var(--p1)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Handout
+          </a>
+        </div>
+      </div>
+
+      <div class="week-card">
+        <div class="week-card-strip" style="background:var(--p1)"></div>
+        <div class="week-card-body">
+          <div class="week-num" style="color:var(--p1)">Week 3</div>
+          <div class="week-title">Fight, Flight, Freeze, Fawn</div>
+          <div class="week-theme">Understanding Your Nervous System's Survival Genius</div>
+          <div class="week-scripture" style="background:var(--p1-lt);color:var(--p1)">"Be still and know that I am God." — Psalm 46:10</div>
+        </div>
+        <div class="week-card-footer">
+          <a href="Week-03-Handout.pdf" download class="btn-download" style="background:var(--p1-lt);color:var(--p1)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Handout
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PHASE 2 -->
+  <section class="phase-section">
+    <div class="phase-header">
+      <div class="phase-dot" style="background:var(--p2)"></div>
+      <div>
+        <div class="phase-label-text" style="color:var(--p2)">Phase 2</div>
+        <div class="phase-name">Processing</div>
+      </div>
+      <div class="phase-weeks-count">Weeks 4 – 7</div>
+    </div>
+    <div class="weeks-grid">
+
+      <div class="week-card">
+        <div class="week-card-strip" style="background:var(--p2)"></div>
+        <div class="week-card-body">
+          <div class="week-num" style="color:var(--p2)">Week 4</div>
+          <div class="week-title">The Permission to Grieve</div>
+          <div class="week-theme">Lament as a Biblical Practice</div>
+          <div class="week-scripture" style="background:var(--p2-lt);color:var(--p2)">"Jesus wept." — John 11:35</div>
+        </div>
+        <div class="week-card-footer">
+          <a href="Week-04-Handout.pdf" download class="btn-download" style="background:var(--p2-lt);color:var(--p2)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Handout
+          </a>
+        </div>
+      </div>
+
+      <div class="week-card">
+        <div class="week-card-strip" style="background:var(--p2)"></div>
+        <div class="week-card-body">
+          <div class="week-num" style="color:var(--p2)">Week 5</div>
+          <div class="week-title">Forgiveness Doesn't Mean Reconciliation</div>
+          <div class="week-theme">The Biblical Truth That Could Set You Free</div>
+          <div class="week-scripture" style="background:var(--p2-lt);color:var(--p2)">"Above all else, guard your heart." — Proverbs 4:23</div>
+        </div>
+        <div class="week-card-footer">
+          <a href="Week-05-Handout.pdf" download class="btn-download" style="background:var(--p2-lt);color:var(--p2)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Handout
+          </a>
+        </div>
+      </div>
+
+      <div class="week-card">
+        <div class="week-card-strip" style="background:var(--p2)"></div>
+        <div class="week-card-body">
+          <div class="week-num" style="color:var(--p2)">Week 6</div>
+          <div class="week-title">Your Body Was Trying to Tell You</div>
+          <div class="week-theme">Somatic Wisdom as God-Given Discernment</div>
+          <div class="week-scripture" style="background:var(--p2-lt);color:var(--p2)">"Your bodies are temples of the Holy Spirit." — 1 Corinthians 6:19</div>
+        </div>
+        <div class="week-card-footer">
+          <a href="Week-06-Handout.pdf" download class="btn-download" style="background:var(--p2-lt);color:var(--p2)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Handout
+          </a>
+        </div>
+      </div>
+
+      <div class="week-card">
+        <div class="week-card-strip" style="background:var(--p2)"></div>
+        <div class="week-card-body">
+          <div class="week-num" style="color:var(--p2)">Week 7</div>
+          <div class="week-title">Why You Chose Them</div>
+          <div class="week-theme">The Attachment Wound</div>
+          <div class="week-scripture" style="background:var(--p2-lt);color:var(--p2)">"See what great love the Father has lavished on us." — 1 John 3:1</div>
+        </div>
+        <div class="week-card-footer">
+          <a href="Week-07-Handout.pdf" download class="btn-download" style="background:var(--p2-lt);color:var(--p2)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Handout
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PHASE 3 -->
+  <section class="phase-section">
+    <div class="phase-header">
+      <div class="phase-dot" style="background:var(--p3)"></div>
+      <div>
+        <div class="phase-label-text" style="color:var(--p3)">Phase 3</div>
+        <div class="phase-name">Reclamation</div>
+      </div>
+      <div class="phase-weeks-count">Weeks 8 – 10</div>
+    </div>
+    <div class="weeks-grid">
+
+      <div class="week-card">
+        <div class="week-card-strip" style="background:var(--p3)"></div>
+        <div class="week-card-body">
+          <div class="week-num" style="color:var(--p3)">Week 8</div>
+          <div class="week-title">Why Thinking Your Way Out Won't Work</div>
+          <div class="week-theme">The Neuroscience Case for Somatic Healing</div>
+          <div class="week-scripture" style="background:var(--p3-lt);color:var(--p3)">"Be transformed by the renewing of your mind." — Romans 12:2</div>
+        </div>
+        <div class="week-card-footer">
+          <a href="Week-08-Handout.pdf" download class="btn-download" style="background:var(--p3-lt);color:var(--p3)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Handout
+          </a>
+        </div>
+      </div>
+
+      <div class="week-card">
+        <div class="week-card-strip" style="background:var(--p3)"></div>
+        <div class="week-card-body">
+          <div class="week-num" style="color:var(--p3)">Week 9</div>
+          <div class="week-title">Holy Anger</div>
+          <div class="week-theme">The Emotion You Were Told Not to Have</div>
+          <div class="week-scripture" style="background:var(--p3-lt);color:var(--p3)">"Be angry and do not sin." — Ephesians 4:26</div>
+        </div>
+        <div class="week-card-footer">
+          <a href="Week-09-Handout.pdf" download class="btn-download" style="background:var(--p3-lt);color:var(--p3)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Handout
+          </a>
+        </div>
+      </div>
+
+      <div class="week-card">
+        <div class="week-card-strip" style="background:var(--p3)"></div>
+        <div class="week-card-body">
+          <div class="week-num" style="color:var(--p3)">Week 10</div>
+          <div class="week-title">Who Were You Before Them?</div>
+          <div class="week-theme">Reclaiming Your God-Given Identity</div>
+          <div class="week-scripture" style="background:var(--p3-lt);color:var(--p3)">"We are God's handiwork, created in Christ Jesus." — Ephesians 2:10</div>
+        </div>
+        <div class="week-card-footer">
+          <a href="Week-10-Handout.pdf" download class="btn-download" style="background:var(--p3-lt);color:var(--p3)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Handout
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PHASE 4 -->
+  <section class="phase-section">
+    <div class="phase-header">
+      <div class="phase-dot" style="background:var(--p4)"></div>
+      <div>
+        <div class="phase-label-text" style="color:var(--p4)">Phase 4</div>
+        <div class="phase-name">Integration</div>
+      </div>
+      <div class="phase-weeks-count">Weeks 11 – 12</div>
+    </div>
+    <div class="weeks-grid">
+
+      <div class="week-card">
+        <div class="week-card-strip" style="background:var(--p4)"></div>
+        <div class="week-card-body">
+          <div class="week-num" style="color:var(--p4)">Week 11</div>
+          <div class="week-title">What Safe Love Actually Feels Like</div>
+          <div class="week-theme">Learning to Recognise and Receive Goodness</div>
+          <div class="week-scripture" style="background:var(--p4-lt);color:var(--p4)">"Love must be sincere. Cling to what is good." — Romans 12:9</div>
+        </div>
+        <div class="week-card-footer">
+          <a href="Week-11-Handout.pdf" download class="btn-download" style="background:var(--p4-lt);color:var(--p4)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Handout
+          </a>
+        </div>
+      </div>
+
+      <div class="week-card">
+        <div class="week-card-strip" style="background:var(--p4)"></div>
+        <div class="week-card-body">
+          <div class="week-num" style="color:var(--p4)">Week 12</div>
+          <div class="week-title">Beauty From Ashes</div>
+          <div class="week-theme">This Is Not the End of Your Story</div>
+          <div class="week-scripture" style="background:var(--p4-lt);color:var(--p4)">"To bestow on them a crown of beauty instead of ashes." — Isaiah 61:3</div>
+        </div>
+        <div class="week-card-footer">
+          <a href="Week-12-Handout.pdf" download class="btn-download" style="background:var(--p4-lt);color:var(--p4)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Handout
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- UPGRADE BANNER -->
+<div class="upgrade">
+  <div class="upgrade-card">
+    <span class="upgrade-ornament">✦ Ready to go deeper? ✦</span>
+    <h2>The full course is waiting <em>for you.</em></h2>
+    <p>12 weeks of video lessons, somatic practices, interactive tools, and a community of women who understand — all faith-rooted, trauma-informed, and designed for exactly where you are.</p>
+    <a href="https://app.paperbell.com/packages/212511" class="btn-upgrade">
+      Join Reclaim Your Self — $27/month →
+    </a>
+    <span class="upgrade-price">Cancel any time · No contracts · Known + Loved Coaching</span>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    <strong>Known + Loved Coaching</strong> · Kate ·
+    <a href="https://knownlovedcoaching.com">knownlovedcoaching.com</a> ·
+    <a href="https://skool.com/known-and-loved-coaching-4236/about">Free Community</a> ·
+    <a href="https://quiz-zeta-lime-22.vercel.app">Take the Quiz</a>
+  </p>
+  <p style="margin-top:6px;font-size:11px;color:#B0A090">© Known + Loved Coaching · All rights reserved</p>
+</footer>
+
+</div>
+
+<script>
+// Scroll reveal for week cards
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, i * 60);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.week-card').forEach(card => {
+  observer.observe(card);
+});
+</script>
+
+</body>
+</html>
