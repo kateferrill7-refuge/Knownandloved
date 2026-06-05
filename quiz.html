@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Am I Experiencing Emotional Abuse? | Known + Loved Coaching</title>
+<meta name="description" content="A gentle, faith-informed quiz to help you understand your relationship experiences. Known + Loved Coaching with Kate."/>
+<meta property="og:title" content="Am I Experiencing Emotional Abuse?"/>
+<meta property="og:description" content="A 20-question quiz to gently name what you may have been living with. Known + Loved Coaching."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  /* ── Reset & Base ─────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream:    #FAF7F2;
+    --cream2:   #F3EDE3;
+    --brown:    #2C2420;
+    --brown2:   #3D2F25;
+    --gold:     #B8924A;
+    --gold2:    #D4A85C;
+    --gold-lt:  #F0E0C4;
+    --gold-bg:  #FBF5EB;
+    --sage:     #4A7A4A;
+    --sage-lt:  #E8F4E8;
+    --slate:    #2E5F7A;
+    --slate-lt: #E0EDF5;
+    --rose:     #8B4545;
+    --rose-lt:  #F5E8E8;
+    --mid:      #5A4A40;
+    --light:    #8A7A70;
+    --border:   #E2D5C4;
+    --shadow:   0 4px 32px rgba(44,36,32,0.10);
+    --shadow-sm:0 2px 12px rgba(44,36,32,0.08);
+    --radius:   16px;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body:    'Jost', sans-serif;
+  }
+
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--brown);
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── Background texture ───────────────────────────────────── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 20% 10%, rgba(184,146,74,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 60% at 80% 80%, rgba(46,95,122,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 50% 50%, rgba(74,122,74,0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* ── Layout ───────────────────────────────────────────────── */
+  .wrap {
+    position: relative; z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+  }
+
+  /* ── Header ───────────────────────────────────────────────── */
+  .site-header {
+    text-align: center;
+    padding: 48px 0 32px;
+    animation: fadeDown 0.7s ease both;
+  }
+  .brand-mark {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-body);
+    font-size: 10px; font-weight: 500; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .brand-mark::before, .brand-mark::after {
+    content: ''; display: block;
+    width: 28px; height: 1px; background: var(--gold);
+  }
+  .site-header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 6vw, 52px);
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    color: var(--brown);
+    margin-bottom: 14px;
+  }
+  .site-header h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .site-header p {
+    font-size: 15px; color: var(--mid);
+    max-width: 480px; margin: 0 auto 6px;
+    font-weight: 300;
+  }
+  .disclaimer {
+    display: inline-block;
+    font-size: 11px; color: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 40px; padding: 4px 14px;
+    margin-top: 14px; letter-spacing: 0.3px;
+  }
+
+  /* ── Progress bar ─────────────────────────────────────────── */
+  .progress-area {
+    margin-bottom: 28px;
+    animation: fadeUp 0.5s 0.2s ease both;
+  }
+  .progress-meta {
+    display: flex; justify-content: space-between;
+    font-size: 11px; color: var(--light);
+    letter-spacing: 1px; text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .progress-track {
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), var(--gold2));
+    border-radius: 2px;
+    transition: width 0.5s cubic-bezier(.4,0,.2,1);
+  }
+
+  /* ── Section label ────────────────────────────────────────── */
+  .section-label {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 10px; font-weight: 600; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px; background: var(--gold-lt);
+  }
+
+  /* ── Question card ────────────────────────────────────────── */
+  .q-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 32px 28px;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+    animation: fadeUp 0.45s ease both;
+  }
+  @media (max-width: 500px) {
+    .q-card { padding: 22px 18px 20px; }
+  }
+
+  .q-number {
+    font-family: var(--font-display);
+    font-size: 13px; color: var(--gold); letter-spacing: 1px;
+    margin-bottom: 10px; display: block;
+  }
+  .q-text {
+    font-family: var(--font-display);
+    font-size: clamp(18px, 3.5vw, 22px);
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--brown);
+    margin-bottom: 22px;
+  }
+  .q-category {
+    font-size: 10px; font-weight: 500; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--light);
+    margin-bottom: 6px; display: block;
+  }
+
+  /* ── Answer options ───────────────────────────────────────── */
+  .options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  @media (max-width: 480px) {
+    .options { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .opt {
+    position: relative;
+    cursor: pointer;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 8px 10px;
+    text-align: center;
+    background: var(--cream);
+    transition: all 0.2s ease;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .opt:hover {
+    border-color: var(--gold);
+    background: var(--gold-bg);
+  }
+  .opt.selected {
+    border-color: var(--gold);
+    background: var(--gold-bg);
+    box-shadow: 0 0 0 3px var(--gold-lt);
+  }
+  .opt input[type=radio] {
+    position: absolute; opacity: 0; width: 0; height: 0;
+  }
+  .opt-dot {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border);
+    background: white;
+    margin: 0 auto 8px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s ease;
+    font-size: 11px; color: white;
+  }
+  .opt.selected .opt-dot {
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+  .opt-dot::after {
+    content: '✓';
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+  .opt.selected .opt-dot::after { opacity: 1; }
+  .opt-label {
+    font-size: 12px; font-weight: 500;
+    color: var(--mid); display: block; line-height: 1.3;
+  }
+  .opt.selected .opt-label { color: var(--brown); }
+  .opt-score {
+    font-size: 10px; color: var(--light); display: block;
+    margin-top: 3px; font-weight: 300;
+  }
+
+  /* ── Navigation ───────────────────────────────────────────── */
+  .nav {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 8px;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-body); font-size: 13px; font-weight: 500;
+    letter-spacing: 0.5px;
+    border: none; border-radius: 40px; padding: 12px 24px;
+    cursor: pointer; transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  .btn-primary {
+    background: var(--brown);
+    color: var(--cream);
+  }
+  .btn-primary:hover { background: var(--brown2); transform: translateY(-1px); }
+  .btn-primary:disabled {
+    background: var(--border); color: var(--light); cursor: not-allowed;
+    transform: none;
+  }
+  .btn-ghost {
+    background: transparent; color: var(--light);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover { color: var(--brown); border-color: var(--mid); }
+  .btn-gold {
+    background: var(--gold);
+    color: white;
+    font-size: 14px; font-weight: 600;
+    padding: 14px 32px;
+    box-shadow: 0 4px 20px rgba(184,146,74,0.3);
+  }
+  .btn-gold:hover {
+    background: var(--gold2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 28px rgba(184,146,74,0.4);
+  }
+
+  /* ── Results ──────────────────────────────────────────────── */
+  .results { animation: fadeUp 0.6s ease both; }
+
+  .result-hero {
+    background: var(--brown);
+    border-radius: var(--radius);
+    padding: 40px 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  @media (max-width: 500px) {
+    .result-hero { padding: 28px 20px; }
+  }
+  .result-hero::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--accent-color, var(--gold));
+  }
+  .result-hero::after {
+    content: '';
+    position: absolute; inset: 0; z-index: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(184,146,74,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .result-ornament {
+    font-family: var(--font-display);
+    font-size: 40px; color: var(--accent-color, var(--gold));
+    line-height: 1; margin-bottom: 14px;
+    position: relative; z-index: 1;
+  }
+  .result-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--accent-color, var(--gold));
+    margin-bottom: 10px; position: relative; z-index: 1;
+  }
+  .result-title {
+    font-family: var(--font-display);
+    font-size: clamp(24px, 5vw, 36px);
+    font-weight: 400; color: white;
+    line-height: 1.2; margin-bottom: 16px;
+    position: relative; z-index: 1;
+  }
+  .result-score-ring {
+    display: inline-flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color, var(--gold));
+    margin: 0 auto 16px;
+    position: relative; z-index: 1;
+  }
+  .result-score-num {
+    font-family: var(--font-display);
+    font-size: 26px; font-weight: 600; color: white; line-height: 1;
+  }
+  .result-score-max {
+    font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1;
+  }
+  .result-summary {
+    font-size: 15px; color: rgba(255,255,255,0.8);
+    line-height: 1.7; max-width: 480px; margin: 0 auto;
+    font-weight: 300; position: relative; z-index: 1;
+  }
+
+  /* ── Result detail cards ──────────────────────────────────── */
+  .result-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-sm);
+  }
+  @media (max-width: 500px) {
+    .result-card { padding: 20px 18px; }
+  }
+  .result-card h3 {
+    font-family: var(--font-display);
+    font-size: 20px; font-weight: 400;
+    color: var(--brown); margin-bottom: 10px;
+  }
+  .result-card p {
+    font-size: 14px; color: var(--mid);
+    line-height: 1.7; font-weight: 300;
+  }
+
+  /* ── Category breakdown ───────────────────────────────────── */
+  .breakdown-title {
+    font-size: 10px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .cat-row {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 10px;
+  }
+  .cat-name {
+    font-size: 12px; font-weight: 500; color: var(--mid);
+    width: 130px; flex-shrink: 0;
+  }
+  .cat-track {
+    flex: 1; height: 6px; background: var(--cream2);
+    border-radius: 3px; overflow: hidden;
+  }
+  .cat-fill {
+    height: 100%; border-radius: 3px;
+    transition: width 1s 0.3s cubic-bezier(.4,0,.2,1);
+  }
+  .cat-pct {
+    font-size: 11px; color: var(--light); width: 32px; text-align: right;
+  }
+
+  /* ── Scripture box ────────────────────────────────────────── */
+  .scripture-box {
+    border-left: 3px solid var(--gold);
+    padding: 16px 20px;
+    background: var(--gold-bg);
+    border-radius: 0 10px 10px 0;
+    margin: 20px 0;
+  }
+  .scripture-box p {
+    font-family: var(--font-display);
+    font-size: 17px; font-style: italic;
+    color: var(--brown); line-height: 1.5;
+    margin-bottom: 4px;
+  }
+  .scripture-box cite {
+    font-size: 11px; color: var(--gold);
+    letter-spacing: 1px; font-style: normal;
+    text-transform: uppercase;
+  }
+
+  /* ── Community CTA ────────────────────────────────────────── */
+  .cta-card {
+    background: var(--brown);
+    border-radius: var(--radius);
+    padding: 36px 32px;
+    text-align: center;
+    position: relative; overflow: hidden;
+    margin-bottom: 24px;
+  }
+  @media (max-width: 500px) {
+    .cta-card { padding: 24px 18px; }
+  }
+  .cta-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold2));
+  }
+  .cta-card .ornament {
+    font-size: 11px; font-weight: 500; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .cta-card h2 {
+    font-family: var(--font-display);
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 300; color: white; margin-bottom: 12px;
+  }
+  .cta-card p {
+    font-size: 14px; color: rgba(255,255,255,0.7);
+    font-weight: 300; line-height: 1.7;
+    max-width: 440px; margin: 0 auto 24px;
+  }
+  .price-pill {
+    display: inline-block;
+    background: rgba(184,146,74,0.15);
+    border: 1px solid var(--gold);
+    border-radius: 40px; padding: 5px 18px;
+    font-size: 13px; font-weight: 600; color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .features-list {
+    list-style: none;
+    text-align: left;
+    max-width: 340px;
+    margin: 0 auto 24px;
+  }
+  .features-list li {
+    font-size: 13px; color: rgba(255,255,255,0.75);
+    font-weight: 300; padding: 5px 0;
+    display: flex; align-items: flex-start; gap: 10px;
+  }
+  .features-list li::before {
+    content: '✦';
+    color: var(--gold); font-size: 10px; margin-top: 3px; flex-shrink: 0;
+  }
+
+  /* ── Restart button ───────────────────────────────────────── */
+  .restart-row {
+    text-align: center; margin-top: 12px;
+  }
+  .btn-restart {
+    background: none; border: none;
+    font-family: var(--font-body); font-size: 12px;
+    color: var(--light); cursor: pointer; letter-spacing: 0.5px;
+    text-decoration: underline; padding: 4px;
+  }
+  .btn-restart:hover { color: var(--brown); }
+
+  /* ── Footer ───────────────────────────────────────────────── */
+  .site-footer {
+    text-align: center;
+    padding: 24px 0 8px;
+    font-size: 11px; color: var(--light);
+    letter-spacing: 0.5px;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+  .site-footer strong { color: var(--gold); font-weight: 500; }
+
+  /* ── Animations ───────────────────────────────────────────── */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.6; }
+  }
+
+  /* ── Intro screen ─────────────────────────────────────────── */
+  .intro { animation: fadeUp 0.6s ease both; }
+  .intro-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px 32px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+  }
+  @media (max-width: 500px) {
+    .intro-card { padding: 24px 18px; }
+  }
+  .intro-card h2 {
+    font-family: var(--font-display);
+    font-size: 24px; font-weight: 400;
+    color: var(--brown); margin-bottom: 14px;
+  }
+  .intro-card p {
+    font-size: 14px; color: var(--mid);
+    line-height: 1.75; font-weight: 300;
+    margin-bottom: 12px;
+  }
+  .what-to-expect {
+    list-style: none;
+    margin: 18px 0 0;
+  }
+  .what-to-expect li {
+    font-size: 13px; color: var(--mid);
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 6px 0;
+  }
+  .what-to-expect li span.dot {
+    width: 18px; height: 18px;
+    border-radius: 50%; background: var(--gold-bg);
+    border: 1px solid var(--gold-lt);
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px; color: var(--gold); margin-top: 1px;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="brand-mark">Known + Loved Coaching</div>
+    <h1>Am I Experiencing<br><em>Emotional Abuse?</em></h1>
+    <p>A gentle, faith-informed quiz to help you name what you may have been living with.</p>
+    <span class="disclaimer">Not a clinical diagnosis · For reflection purposes · You are safe here</span>
+  </header>
+
+  <!-- QUIZ CONTAINER -->
+  <div id="app"></div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <strong>Known + Loved Coaching</strong> · knownlovedcoaching.com<br>
+    <span style="margin-top:4px; display:block;">
+      "He heals the brokenhearted and binds up their wounds." — Psalm 147:3
+    </span>
+  </footer>
+
+</div>
+
+<script>
+// ── Quiz Data ──────────────────────────────────────────────────────────────
+const QUESTIONS = [
+  // GASLIGHTING (5 questions)
+  {
+    id: 1, cat: "Gaslighting",
+    text: "When you bring up something that hurt you, they tell you it never happened or that you're remembering it wrong.",
+  },
+  {
+    id: 2, cat: "Gaslighting",
+    text: "You often find yourself questioning your own memory, perception, or sanity.",
+  },
+  {
+    id: 3, cat: "Gaslighting",
+    text: "They use your emotional response as evidence that you are unstable, too sensitive, or overreacting.",
+  },
+  {
+    id: 4, cat: "Gaslighting",
+    text: "You have started to apologise for things you didn't do just to keep the peace.",
+  },
+  {
+    id: 5, cat: "Gaslighting",
+    text: "When others hear your story, they react with disbelief — which makes you doubt yourself even more.",
+  },
+  // CONTROL & ISOLATION (4 questions)
+  {
+    id: 6, cat: "Control & Isolation",
+    text: "You feel like you have to check in, report your whereabouts, or explain your decisions to keep them calm.",
+  },
+  {
+    id: 7, cat: "Control & Isolation",
+    text: "Your relationships with friends or family have become strained or distant since being in this relationship.",
+  },
+  {
+    id: 8, cat: "Control & Isolation",
+    text: "You feel monitored — your phone, finances, schedule, or social media.",
+  },
+  {
+    id: 9, cat: "Control & Isolation",
+    text: "Your sense of independence — financially, socially, or spiritually — has shrunk over time.",
+  },
+  // EMOTIONAL MANIPULATION (4 questions)
+  {
+    id: 10, cat: "Emotional Manipulation",
+    text: "They cycle between intense affection and coldness or cruelty in a way that keeps you off balance.",
+  },
+  {
+    id: 11, cat: "Emotional Manipulation",
+    text: "When you try to address a problem, the conversation ends with you comforting them instead.",
+  },
+  {
+    id: 12, cat: "Emotional Manipulation",
+    text: "They use guilt, shame, religion, or 'the children' to control your behavior.",
+  },
+  {
+    id: 13, cat: "Emotional Manipulation",
+    text: "You feel responsible for their emotional state — like it's your job to keep them happy.",
+  },
+  // IDENTITY EROSION (4 questions)
+  {
+    id: 14, cat: "Identity Erosion",
+    text: "You have stopped pursuing hobbies, friendships, or parts of yourself that you used to value.",
+  },
+  {
+    id: 15, cat: "Identity Erosion",
+    text: "Your opinions, preferences, or beliefs are regularly dismissed, corrected, or mocked.",
+  },
+  {
+    id: 16, cat: "Identity Erosion",
+    text: "You often feel like a smaller version of yourself than you were before this relationship.",
+  },
+  {
+    id: 17, cat: "Identity Erosion",
+    text: "You feel afraid to disagree, set a limit, or say no — even about small things.",
+  },
+  // BODY SIGNALS (3 questions)
+  {
+    id: 18, cat: "Body Signals",
+    text: "You feel anxious, tense, or 'on alert' before seeing or talking to them.",
+  },
+  {
+    id: 19, cat: "Body Signals",
+    text: "You find yourself replaying conversations, trying to figure out what you did wrong.",
+  },
+  {
+    id: 20, cat: "Body Signals",
+    text: "Something in you — a quiet knowing — has been saying for a long time that something is wrong.",
+  },
+];
+
+const ANSWERS = [
+  { label: "Never",     score: 0 },
+  { label: "Sometimes", score: 1 },
+  { label: "Often",     score: 2 },
+  { label: "Always",    score: 3 },
+];
+
+const CATEGORIES = ["Gaslighting","Control & Isolation","Emotional Manipulation","Identity Erosion","Body Signals"];
+const CAT_COUNTS  = { "Gaslighting":5, "Control & Isolation":4, "Emotional Manipulation":4, "Identity Erosion":4, "Body Signals":3 };
+
+// ── Result tiers ───────────────────────────────────────────────────────────
+const TIERS = [
+  {
+    min: 0, max: 14,
+    ornament: "✦",
+    label: "Low Indicators",
+    title: "Minimal Signs of Emotional Abuse",
+    accentColor: "#4A7A4A",
+    summary: "Your responses suggest limited indicators of emotional abuse at this time. You may have taken this quiz out of curiosity, for a friend, or because something felt slightly off. That instinct is worth honouring. Trust yourself.",
+    scripture: { text: '"He guides the humble in what is right and teaches them his way."', ref: "Psalm 25:9" },
+    meaning: "A low score doesn't mean your experiences aren't real or that your relationship is perfectly healthy. If something in you still feels uncertain, that matters. You know your relationship better than any quiz does.",
+    next: "If you took this for someone you love, the best thing you can do is stay present, stay warm, and keep the door open. If you took it for yourself — your intuition brought you here. Keep listening to it.",
+    cta_head: "Explore Further",
+    cta_body: "Inside the Reclaim Your Self community, we create space to gently examine our relationships through a faith and somatic lens — no crisis required. Come as you are.",
+  },
+  {
+    min: 15, max: 29,
+    ornament: "◈",
+    label: "Moderate Indicators",
+    title: "Some Patterns of Emotional Abuse Are Present",
+    accentColor: "#B8924A",
+    summary: "Your responses indicate a moderate presence of patterns consistent with emotional abuse. Some of what you described may feel familiar — even normal — because you've been in it for a while. That doesn't make it okay. It makes it harder to see.",
+    scripture: { text: '"The truth will set you free."', ref: "John 8:32" },
+    meaning: "Moderate scores often reflect relationships that feel confusing — not all bad, not clearly abusive. This is one of the hallmarks of narcissistic abuse: the good is good enough to keep you doubting the bad. Your confusion is not weakness. It is the result of a designed pattern.",
+    next: "You deserve support in making sense of what you're experiencing. Naming the patterns is not the same as leaving — but it is a form of waking up. You are allowed to want clarity.",
+    cta_head: "You Don't Have to Figure This Out Alone",
+    cta_body: "The Reclaim Your Self community was built for exactly this moment — when you know something is wrong but aren't sure yet what to do. Come heal with us.",
+  },
+  {
+    min: 30, max: 44,
+    ornament: "◈◈",
+    label: "Strong Indicators",
+    title: "Significant Patterns of Emotional Abuse Are Present",
+    accentColor: "#7A5C2E",
+    summary: "Your responses reflect a significant presence of patterns consistent with emotional and potentially narcissistic abuse. What you are living with is real. It has a name. And it is not your fault.",
+    scripture: { text: '"He heals the brokenhearted and binds up their wounds."', ref: "Psalm 147:3" },
+    meaning: "A score in this range often comes with relief — finally having language for something you've been carrying alone. It may also come with grief, fear, or disbelief. All of that is welcome here. You are not too broken to heal. You are not crazy. You are responding normally to abnormal treatment.",
+    next: "You deserve more than surviving. You deserve actual support, body-based healing, and a community of women who understand what you've been through. Please don't stay isolated with this.",
+    cta_head: "You Are Not Alone in This",
+    cta_body: "The Reclaim Your Self community was created for women exactly where you are. Faith-based, somatic, trauma-informed — and full of women who finally understand what you're describing.",
+  },
+  {
+    min: 45, max: 60,
+    ornament: "◈◈◈",
+    label: "Very Strong Indicators",
+    title: "You Are Very Likely Experiencing Narcissistic Abuse",
+    accentColor: "#8B4545",
+    summary: "Your responses are consistent with severe emotional and narcissistic abuse. I want to say this as clearly and as gently as I can: what you are experiencing is not normal. It is not love. And none of it is your fault.",
+    scripture: { text: '"So if the Son sets you free, you will be free indeed."', ref: "John 8:36" },
+    meaning: "You may have taken this quiz knowing the answer before you started. Or you may be seeing it written out for the first time and feeling the weight of recognition. Either way — you are seen. What you have been living with is real, it is serious, and you deserve to be held and helped.",
+    next: "Please don't walk through this alone. The isolation that abuse creates is part of how it works. Reaching out — to a therapist, a community, a trusted person — is one of the most courageous things you can do.",
+    cta_head: "This Is the Beginning of Something New",
+    cta_body: "You found this quiz for a reason. The Reclaim Your Self community is a safe, faith-rooted space for women healing from exactly this. We go slowly. We go together.",
+  },
+];
+
+// ── State ──────────────────────────────────────────────────────────────────
+let screen   = 'intro';    // 'intro' | 'quiz' | 'results'
+let current  = 0;          // current question index
+let answers  = {};         // { questionId: score }
+
+// ── Render engine ──────────────────────────────────────────────────────────
+const app = document.getElementById('app');
+
+function render() {
+  if (screen === 'intro')   renderIntro();
+  else if (screen === 'quiz')    renderQuiz();
+  else if (screen === 'results') renderResults();
+}
+
+// ── INTRO ──────────────────────────────────────────────────────────────────
+function renderIntro() {
+  app.innerHTML = `
+    <div class="intro">
+      <div class="intro-card">
+        <h2>Before you begin</h2>
+        <p>This quiz covers 20 questions across five areas: gaslighting, control, emotional manipulation, identity erosion, and your body's signals.</p>
+        <p>There are no wrong answers. Answer based on your most significant relationship — or a past one that still feels heavy.</p>
+        <p>This is not a clinical assessment. It is a mirror — designed to gently name what many women have lived with for years without language for it.</p>
+        <ul class="what-to-expect">
+          <li><span class="dot">1</span> 20 questions, ~5 minutes</li>
+          <li><span class="dot">2</span> Trauma-sensitive, faith-informed results</li>
+          <li><span class="dot">3</span> No email required — completely private</li>
+          <li><span class="dot">4</span> You can restart at any time</li>
+        </ul>
+      </div>
+      <div style="text-align:center;">
+        <button class="btn btn-gold" onclick="startQuiz()">
+          Begin the Quiz &nbsp;→
+        </button>
+      </div>
+    </div>
+  `;
+}
+
+// ── QUIZ ───────────────────────────────────────────────────────────────────
+function renderQuiz() {
+  const q   = QUESTIONS[current];
+  const pct = Math.round((current / QUESTIONS.length) * 100);
+  const sel = answers[q.id] !== undefined ? answers[q.id] : -1;
+
+  app.innerHTML = `
+    <div>
+      <div class="progress-area">
+        <div class="progress-meta">
+          <span>Question ${current + 1} of ${QUESTIONS.length}</span>
+          <span>${pct}% complete</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" style="width:${pct}%"></div>
+        </div>
+      </div>
+
+      <div class="q-card">
+        <span class="q-category">${q.cat}</span>
+        <span class="q-number">Question ${current + 1}</span>
+        <p class="q-text">${q.text}</p>
+
+        <div class="options">
+          ${ANSWERS.map((a, i) => `
+            <label class="opt ${sel === a.score ? 'selected' : ''}" onclick="selectAnswer(${a.score})">
+              <input type="radio" name="q${q.id}" value="${a.score}" ${sel === a.score ? 'checked' : ''}/>
+              <span class="opt-dot"></span>
+              <span class="opt-label">${a.label}</span>
+            </label>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="nav">
+        <button class="btn btn-ghost" onclick="prevQ()" ${current === 0 ? 'style="opacity:0;pointer-events:none"' : ''}>
+          ← Back
+        </button>
+        <button class="btn btn-primary" onclick="nextQ()" ${sel === -1 ? 'disabled' : ''}>
+          ${current === QUESTIONS.length - 1 ? 'See My Results' : 'Next →'}
+        </button>
+      </div>
+    </div>
+  `;
+}
+
+// ── RESULTS ────────────────────────────────────────────────────────────────
+function renderResults() {
+  const total = Object.values(answers).reduce((s, v) => s + v, 0);
+  const max   = QUESTIONS.length * 3; // 60
+
+  const tier = TIERS.find(t => total >= t.min && total <= t.max) || TIERS[TIERS.length - 1];
+
+  // Category scores
+  const catScores = {};
+  CATEGORIES.forEach(cat => {
+    const qs = QUESTIONS.filter(q => q.cat === cat);
+    const score = qs.reduce((s, q) => s + (answers[q.id] || 0), 0);
+    const catMax = qs.length * 3;
+    catScores[cat] = Math.round((score / catMax) * 100);
+  });
+
+  const catColors = {
+    "Gaslighting":           "#B8924A",
+    "Control & Isolation":   "#2E5F7A",
+    "Emotional Manipulation":"#8B4545",
+    "Identity Erosion":      "#6B3D6B",
+    "Body Signals":          "#4A7A4A",
+  };
+
+  app.innerHTML = `
+    <div class="results">
+
+      <!-- Hero -->
+      <div class="result-hero" style="--accent-color:${tier.accentColor}">
+        <div class="result-ornament">${tier.ornament}</div>
+        <div class="result-label">${tier.label}</div>
+        <div class="result-score-ring">
+          <span class="result-score-num">${total}</span>
+          <span class="result-score-max">/ ${max}</span>
+        </div>
+        <h2 class="result-title">${tier.title}</h2>
+        <p class="result-summary">${tier.summary}</p>
+      </div>
+
+      <!-- What this means -->
+      <div class="result-card">
+        <h3>What This Means</h3>
+        <div class="scripture-box">
+          <p>${tier.scripture.text}</p>
+          <cite>${tier.scripture.ref}</cite>
+        </div>
+        <p>${tier.meaning}</p>
+      </div>
+
+      <!-- What to do next -->
+      <div class="result-card">
+        <h3>What to Do With This</h3>
+        <p>${tier.next}</p>
+      </div>
+
+      <!-- Category breakdown -->
+      <div class="result-card">
+        <div class="breakdown-title">Your Pattern Breakdown</div>
+        ${CATEGORIES.map(cat => `
+          <div class="cat-row">
+            <span class="cat-name">${cat}</span>
+            <div class="cat-track">
+              <div class="cat-fill" style="width:0%;background:${catColors[cat]}" data-pct="${catScores[cat]}"></div>
+            </div>
+            <span class="cat-pct">${catScores[cat]}%</span>
+          </div>
+        `).join('')}
+        <p style="font-size:12px;color:var(--light);margin-top:12px;font-style:italic;">
+          Higher percentages indicate more frequent patterns in that area.
+        </p>
+      </div>
+
+      <!-- A note of care -->
+      <div class="result-card">
+        <h3>A Note From Kate</h3>
+        <p>Whatever your score — you came here looking for language for something you've been carrying. That matters. Whether you're in the middle of it, years out, or watching someone you love — healing is possible. Your body, your faith, and your story are all part of that.</p>
+        <div class="scripture-box" style="margin-top:16px">
+          <p>"To bestow on them a crown of beauty instead of ashes, the oil of joy instead of mourning."</p>
+          <cite>Isaiah 61:3</cite>
+        </div>
+      </div>
+
+      <!-- Community CTA -->
+      <div class="cta-card">
+        <div class="ornament">Known + Loved Coaching</div>
+        <h2>${tier.cta_head}</h2>
+        <p>${tier.cta_body}</p>
+        <div class="price-pill">Reclaim Your Self Community — $27 / month</div>
+        <ul class="features-list">
+          <li>12-week faith-based somatic healing curriculum</li>
+          <li>Interactive tools for every lesson</li>
+          <li>Weekly video lessons from Kate</li>
+          <li>Downloadable worksheets & somatic practices</li>
+          <li>Women healing alongside you</li>
+        </ul>
+        <a href="https://knownlovedcoaching.com" class="btn btn-gold" target="_blank" rel="noopener">
+          Join the Community →
+        </a>
+      </div>
+
+      <!-- Restart -->
+      <div class="restart-row">
+        <button class="btn-restart" onclick="restartQuiz()">← Retake the quiz</button>
+      </div>
+
+    </div>
+  `;
+
+  // Animate category bars after paint
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      document.querySelectorAll('.cat-fill').forEach(el => {
+        el.style.width = el.dataset.pct + '%';
+      });
+    }, 100);
+  });
+
+  // Scroll to results
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── Actions ────────────────────────────────────────────────────────────────
+function startQuiz() {
+  screen  = 'quiz';
+  current = 0;
+  answers = {};
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function selectAnswer(score) {
+  const q = QUESTIONS[current];
+  answers[q.id] = score;
+  render(); // Re-render to show selected state
+}
+
+function nextQ() {
+  const q = QUESTIONS[current];
+  if (answers[q.id] === undefined) return;
+
+  if (current < QUESTIONS.length - 1) {
+    current++;
+    render();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    screen = 'results';
+    render();
+  }
+}
+
+function prevQ() {
+  if (current > 0) {
+    current--;
+    render();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+function restartQuiz() {
+  screen  = 'intro';
+  current = 0;
+  answers = {};
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── Boot ───────────────────────────────────────────────────────────────────
+render();
+</script>
+</body>
+</html>
