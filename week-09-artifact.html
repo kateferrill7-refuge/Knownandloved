@@ -118,33 +118,13 @@ async function buildScript(){
   if(!scenario.trim()||loading)return;
   loading=true;script='';render();
   try{
-    const res=await fetch("https://api.anthropic.com/v1/messages",{
+    const res=await fetch("/api/build-script",{
       method:"POST",headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({
-        model:"claude-sonnet-4-20250514",max_tokens:1000,
-        messages:[{role:"user",content:`You are a trauma-informed, faith-based boundary coach helping a survivor of narcissistic abuse.
-
-Situation: "${scenario}"
-Tone: ${tone}
-
-Write a short boundary script (3-5 sentences) with: 1) a clear "I" statement, 2) the specific boundary, 3) the calm consequence if not respected.
-
-Then: one somatic prep cue (one sentence).
-Then: one short prayer prompt (one sentence).
-
-Format exactly:
-SCRIPT:
-[script]
-
-SOMATIC PREP:
-[one sentence]
-
-PRAYER:
-[one sentence]`}]
-      })
+      body:JSON.stringify({scenario, tone})
     });
+    if(!res.ok){ script="Unable to generate — please try again."; loading=false; render(); return; }
     const d=await res.json();
-    script=d.content?.[0]?.text||"Unable to generate — please try again.";
+    script=d.text||"Unable to generate — please try again.";
   }catch{script="Unable to connect. Please try again in a moment.";}
   loading=false;render();
 }
