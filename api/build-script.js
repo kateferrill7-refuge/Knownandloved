@@ -41,7 +41,7 @@ PRAYER:
       },
       body: JSON.stringify({
         model: 'claude-sonnet-5',
-        max_tokens: 1000,
+        max_tokens: 1500,
         messages: [{ role: 'user', content: prompt }]
       })
     });
@@ -53,7 +53,18 @@ PRAYER:
     }
 
     const data = await anthropicRes.json();
-    const text = data.content?.[0]?.text || '';
+
+    // Find the first actual text block rather than assuming content[0] is text
+    // (the response can include other block types first, e.g. thinking blocks)
+    const textBlock = Array.isArray(data.content)
+      ? data.content.find((block) => block.type === 'text')
+      : null;
+    const text = textBlock?.text || '';
+
+    if (!text) {
+      // Log the full raw response so it shows up in Vercel logs if this happens again
+      console.error('Empty text from Anthropic. stop_reason:', data.stop_reason, 'raw:', JSON.stringify(data));
+    }
 
     return res.status(200).json({ text });
   } catch (err) {
