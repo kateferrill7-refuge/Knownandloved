@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Thank You — Known + Loved Coaching</title>
+<meta name="robots" content="noindex, nofollow"/>
+
+<!-- Facebook Pixel Code -->
+<script nonce="M1rWU9fe">
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1091552966870965');
+fbq('track', "PageView");
+fbq('track', 'Purchase', {
+  value: 0.00,
+  currency: 'USD',
+  content_name: 'Facilitator Bundle',
+  content_type: 'product'
+});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1091552966870965&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+
+:root {
+  --cream:   #FAF7F2;
+  --brown:   #2C2420;
+  --gold:    #B8924A;
+  --gold2:   #C9A056;
+  --gold-lt: #F0E0C4;
+  --gold-bg: #FBF5EB;
+  --plum:    #6B3D6B;
+  --plum-lt: #F0E5F0;
+  --mid:     #5A4A40;
+  --light:   #8A7A70;
+  --border:  #E2D5C4;
+  --display: 'Cormorant Garamond', Georgia, serif;
+  --body:    'Jost', sans-serif;
+}
+
+body {
+  background: var(--cream);
+  color: var(--brown);
+  font-family: var(--body);
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 10% 0%, rgba(184,146,74,0.09) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 55% at 90% 95%, rgba(107,61,107,0.06) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.page { position: relative; z-index: 1; }
+
+/* Nav */
+.nav {
+  padding: 18px 28px;
+  display: flex; align-items: center; justify-content: center;
+  border-bottom: 1px solid var(--border);
+  background: rgba(250,247,242,0.95);
+  backdrop-filter: blur(12px);
+}
+.nav-brand {
+  font-family: var(--display);
+  font-size: 18px; font-weight: 400; color: var(--brown);
+}
+.nav-brand em { font-style: italic; color: var(--gold); }
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 72px 24px 48px;
+  max-width: 680px;
+  margin: 0 auto;
+  animation: fadeUp 0.7s ease both;
+}
+
+.check-circle {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: var(--gold-bg);
+  border: 2px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 30px;
+  animation: pop 0.5s 0.3s cubic-bezier(.175,.885,.32,1.275) both;
+}
+
+.hero-eyebrow {
+  font-size: 10px; font-weight: 600; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 14px; display: block;
+}
+
+.hero h1 {
+  font-family: var(--display);
+  font-size: clamp(36px, 6vw, 58px);
+  font-weight: 300; line-height: 1.1;
+  color: var(--brown); margin-bottom: 10px;
+}
+.hero h1 em { font-style: italic; color: var(--gold); display: block; }
+
+.hero-sub {
+  font-family: var(--display);
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-weight: 300; font-style: italic;
+  color: var(--mid); margin: 16px auto 0;
+  max-width: 480px; line-height: 1.6;
+}
+
+/* Scripture */
+.scripture-wrap {
+  max-width: 560px;
+  margin: 40px auto;
+  padding: 0 24px;
+  animation: fadeUp 0.7s 0.2s ease both;
+}
+.scripture-box {
+  border-left: 3px solid var(--gold);
+  padding: 16px 22px;
+  background: var(--gold-bg);
+  border-radius: 0 10px 10px 0;
+  text-align: left;
+}
+.scripture-box p {
+  font-family: var(--display);
+  font-size: 17px; font-style: italic;
+  color: var(--brown); line-height: 1.6;
+  margin-bottom: 6px;
+}
+.scripture-box cite {
+  font-size: 11px; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--gold);
+  font-style: normal;
+}
+
+/* What's next */
+.wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.section-label {
+  font-size: 10px; font-weight: 600; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
+}
+.section-label::after {
+  content: ''; flex: 1; height: 1px; background: var(--gold-lt);
+}
+
+/* Next steps cards */
+.next-steps {
+  display: flex; flex-direction: column; gap: 14px;
+  margin-bottom: 40px;
+  animation: fadeUp 0.7s 0.35s ease both;
+}
+
+.step-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px 24px;
+  box-shadow: 0 2px 16px rgba(44,36,32,0.06);
+  display: flex; gap: 18px; align-items: flex-start;
+}
+.step-num {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--gold-bg); border: 1.5px solid var(--gold-lt);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--display); font-size: 15px; color: var(--gold);
+  font-weight: 600; flex-shrink: 0;
+}
+.step-content h4 {
+  font-family: var(--display);
+  font-size: 18px; font-weight: 500;
+  color: var(--brown); margin-bottom: 5px;
+}
+.step-content p {
+  font-size: 13px; color: var(--mid);
+  line-height: 1.6; font-weight: 300;
+}
+
+/* Refuge CTA */
+.refuge-card {
+  background: var(--brown);
+  border-radius: 18px;
+  padding: 44px 36px;
+  text-align: center;
+  position: relative; overflow: hidden;
+  margin-bottom: 20px;
+  animation: fadeUp 0.7s 0.5s ease both;
+}
+@media (max-width: 540px) { .refuge-card { padding: 30px 20px; } }
+
+.refuge-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--plum), var(--gold));
+}
+.refuge-card::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(107,61,107,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.refuge-ornament {
+  font-size: 10px; font-weight: 600; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--plum-lt);
+  margin-bottom: 12px; display: block;
+  position: relative; z-index: 1;
+  opacity: 0.8;
+}
+
+.refuge-card h2 {
+  font-family: var(--display);
+  font-size: clamp(24px, 4.5vw, 38px);
+  font-weight: 300; color: white;
+  margin-bottom: 12px; line-height: 1.2;
+  position: relative; z-index: 1;
+}
+.refuge-card h2 em { font-style: italic; color: var(--gold); }
+
+.refuge-card p {
+  font-size: 14px; color: rgba(250,247,242,0.72);
+  font-weight: 300; line-height: 1.75;
+  max-width: 460px; margin: 0 auto 28px;
+  position: relative; z-index: 1;
+}
+
+.features-list {
+  list-style: none;
+  text-align: left;
+  max-width: 360px;
+  margin: 0 auto 28px;
+  position: relative; z-index: 1;
+}
+.features-list li {
+  font-size: 13px; color: rgba(250,247,242,0.78);
+  font-weight: 300; padding: 5px 0;
+  display: flex; gap: 10px; align-items: flex-start;
+}
+.features-list li::before {
+  content: '✦'; color: var(--gold); font-size: 10px;
+  margin-top: 3px; flex-shrink: 0;
+}
+
+.trial-pill {
+  display: inline-block;
+  background: rgba(184,146,74,0.15);
+  border: 1px solid var(--gold);
+  border-radius: 40px; padding: 5px 18px;
+  font-size: 12px; font-weight: 600; color: var(--gold);
+  margin-bottom: 20px;
+  position: relative; z-index: 1;
+}
+
+.btn-refuge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--gold); color: white;
+  border: none; border-radius: 40px;
+  padding: 15px 44px;
+  font-family: var(--body); font-size: 15px; font-weight: 600;
+  letter-spacing: 0.5px; cursor: pointer; text-decoration: none;
+  box-shadow: 0 6px 28px rgba(184,146,74,0.35);
+  transition: all 0.22s ease;
+  position: relative; z-index: 1;
+}
+.btn-refuge:hover {
+  background: var(--gold2);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(184,146,74,0.45);
+}
+.btn-sub {
+  display: block; font-size: 11px;
+  color: rgba(250,247,242,0.4);
+  margin-top: 12px; font-style: italic;
+  position: relative; z-index: 1;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 24px;
+  text-align: center;
+  font-size: 12px; color: var(--light);
+}
+footer a { color: var(--gold); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pop {
+  from { opacity: 0; transform: scale(0.5); }
+  to   { opacity: 1; transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-brand">Known + Loved <em>Coaching</em></div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="check-circle">✦</div>
+    <span class="hero-eyebrow">Order Confirmed</span>
+    <h1>You are ready<em>to lead.</em></h1>
+    <p class="hero-sub">Your Reclaim Your Self Workbook and Facilitator's Guide are on their way. Check your inbox for the download link.</p>
+  </section>
+
+  <!-- SCRIPTURE -->
+  <div class="scripture-wrap">
+    <div class="scripture-box">
+      <p>"Carry each other's burdens, and in this way you will fulfil the law of Christ."</p>
+      <cite>Galatians 6:2</cite>
+    </div>
+  </div>
+
+  <!-- WHAT'S NEXT -->
+  <div class="wrap">
+    <div class="section-label">What to do next</div>
+
+    <div class="next-steps">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Check your inbox</h4>
+          <p>Your download link has been sent to the email address you used at checkout. If you do not see it within a few minutes, please check your spam folder. The files are PDFs and will arrive together.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Read the facilitator's guide first</h4>
+          <p>Before your first session, read the introduction and the first two or three session guides. Familiarise yourself with the facilitator principles at the front. The guide is designed to be a companion, not a script. Trust what is there and trust your instincts.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Print the workbooks for your group</h4>
+          <p>The workbook prints cleanly on standard 8.5 x 11 paper, single or double-sided. You are licensed to print as many copies as your group needs. Consider having them spiral-bound at a local print shop for a more durable, journal-like experience.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Point your participants to The Refuge Community</h4>
+          <p>The Refuge is the online companion to the workbook -- with full video lessons, interactive somatic tools, and a private faith-based community. Give your participants the link below so they have somewhere to go between your sessions. There is a 7-day free trial with no credit card required.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- REFUGE CTA -->
+    <div class="refuge-card">
+      <span class="refuge-ornament">✦ For Your Participants ✦</span>
+      <h2>Give them a place to go<em>between sessions.</em></h2>
+      <p>The Refuge Community is the online companion to the workbook. While you hold the live group space, The Refuge holds the in-between -- the days when something surfaces and they need somewhere to take it.</p>
+      <ul class="features-list">
+        <li>Full 12-week video curriculum from Kate</li>
+        <li>Interactive somatic tools for every lesson</li>
+        <li>A private faith-based healing community</li>
+        <li>Direct access to Kate throughout</li>
+      </ul>
+      <div class="trial-pill">7-day free trial -- no credit card required</div>
+      <br/>
+      <a href="https://refuge.knownlovedcoaching.com/" class="btn-refuge">
+        Explore The Refuge Free →
+      </a>
+      <span class="btn-sub">refuge.knownlovedcoaching.com</span>
+    </div>
+
+    <!-- FOOTER COPY -->
+    <p style="text-align:center;font-size:13px;color:var(--light);line-height:1.7;max-width:480px;margin:32px auto 0;font-style:italic;">
+      If you have any questions about the materials, facilitation, or what to do when something hard surfaces in your group -- reach out. I mean that.
+    </p>
+    <p style="text-align:center;margin-top:10px;font-size:13px;color:var(--gold);font-weight:500;">
+      <a href="https://knownlovedcoaching.com" style="color:var(--gold);text-decoration:none;">knownlovedcoaching.com</a>
+    </p>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Known + Loved Coaching</strong> · Kate ·
+    <a href="https://knownlovedcoaching.com">knownlovedcoaching.com</a></p>
+    <p style="margin-top:6px;font-size:11px;color:#B0A090;">
+      "He heals the brokenhearted and binds up their wounds." -- Psalm 147:3
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
