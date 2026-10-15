@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>First Steps to Freedom | Known + Loved Coaching</title>
+<meta name="description" content="A free video series for Christian women beginning to heal from narcissistic abuse. Gentle, faith-centered, and trauma-informed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#1E3B36;
+  --pine-soft:#31554E;
+  --mist:#EAF1EE;
+  --paper:#FBFCFB;
+  --gold:#C8A04A;
+  --gold-deep:#8A6A1F;
+  --ink:#1D2A27;
+  --muted:#51615D;
+  --display:"Fraunces",Georgia,serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.65;color:var(--ink);background:var(--paper)}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0 0 .6em;color:var(--pine)}
+h1{font-size:clamp(2.3rem,5.5vw,3.9rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,3.4vw,2.3rem)}
+h3{font-size:1.25rem}
+p{margin:0 0 1em;max-width:62ch}
+a{color:var(--pine-soft)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+
+/* Hero */
+.hero{background:var(--pine);color:#F3F7F5;padding:clamp(2.5rem,7vw,5rem) 0 0;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(1.5rem,5vw,4rem);align-items:end}
+.hero h1{color:#fff}
+.hero p{color:#D5E2DD;font-size:1.15rem}
+.brand{font-family:var(--display);font-size:1rem;color:#BFD2CB;margin-bottom:2rem}
+.hero-copy{padding-bottom:clamp(2.5rem,6vw,4.5rem)}
+
+/* The doorway: the one memorable element */
+.door{justify-self:center;width:min(300px,80%);aspect-ratio:3/4.2;border-radius:999px 999px 0 0;
+  background:linear-gradient(180deg,#F6E7BE 0%,#E9C877 45%,#C8A04A 100%);
+  box-shadow:0 0 0 10px var(--pine-soft),0 0 90px 10px rgba(233,200,119,.45);
+  position:relative;animation:dawn 2.4s ease-out both}
+.door::after{content:"";position:absolute;left:50%;bottom:0;width:2px;height:55%;
+  background:linear-gradient(180deg,transparent,rgba(30,59,54,.25));transform:translateX(-50%)}
+@keyframes dawn{from{opacity:.25;filter:saturate(.4)}to{opacity:1;filter:none}}
+
+/* Form */
+.signup{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0 .6rem;max-width:34rem}
+.signup input[type=email],.signup input[type=text]{flex:1 1 11rem;padding:.9rem 1rem;font:inherit;border:2px solid transparent;border-radius:10px;background:#fff;color:var(--ink)}
+.signup button,.btn{font:inherit;font-weight:600;padding:.9rem 1.5rem;border:0;border-radius:10px;background:var(--gold);color:#1B2320;cursor:pointer;text-decoration:none;display:inline-block}
+.signup button:hover,.btn:hover{background:#D8B25E}
+.fine{font-size:.92rem;color:#BFD2CB}
+
+/* Sections */
+section{padding:clamp(3rem,7vw,5.5rem) 0}
+.mist{background:var(--mist)}
+.lead{font-size:1.2rem;color:var(--muted)}
+.get{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2rem}
+.get div{border-top:3px solid var(--gold);padding-top:1rem}
+.get p{color:var(--muted);margin:0}
+.who{columns:2;column-gap:3rem;padding:0;list-style:none;margin:1.5rem 0 0;max-width:46rem}
+.who li{break-inside:avoid;padding:.35rem 0 .35rem 1.6rem;position:relative}
+.who li::before{content:"";position:absolute;left:0;top:.95rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,5vw,4rem)}
+.next{background:var(--pine);color:#E6EFEB}
+.next h2{color:#fff}
+.next p{color:#D5E2DD}
+.safety{font-size:.95rem;color:var(--muted);border-left:4px solid var(--gold);padding:.4rem 0 .4rem 1rem;max-width:46rem}
+footer{padding:2rem 0 3rem;font-size:.95rem;color:var(--muted)}
+
+@media (max-width:760px){
+  .hero .wrap,.about,.get{grid-template-columns:1fr}
+  .door{width:200px;order:-1;margin-top:-.5rem}
+  .hero .wrap{align-items:start}
+  .who{columns:1}
+}
+@media (prefers-reduced-motion:reduce){.door{animation:none}html{scroll-behavior:auto}}
+</style>
+<script>
+  (function(w, d, t, h, s, n) {
+    w.FlodeskObject = n;
+    var fn = function() {
+      (w[n].q = w[n].q || []).push(arguments);
+    };
+    w[n] = w[n] || fn;
+    var f = d.getElementsByTagName(t)[0];
+    var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+    var sm = d.createElement(t);
+    sm.async = true;
+    sm.type = 'module';
+    sm.src = h + s + '.mjs' + v;
+    f.parentNode.insertBefore(sm, f);
+    var sn = d.createElement(t);
+    sn.async = true;
+    sn.noModule = true;
+    sn.src = h + s + '.js' + v;
+    f.parentNode.insertBefore(sn, f);
+  })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+</script>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="brand">Known + Loved Coaching</div>
+      <h1>You are not too broken to heal.</h1>
+      <p>First Steps to Freedom is a free video series for Christian women who are beginning to find their way out of the confusion and pain of narcissistic abuse. Short, gentle, and made to be watched at your own pace.</p>
+
+      <p style="margin:1.5rem 0"><a class="btn" href="#fd-form-6ad0f09f784c158a101c9245">Send me the videos</a></p>
+
+      <div id="fd-form-6ad0f09f784c158a101c9245"></div>
+      <script>
+        window.fd('form', {
+          formId: '6ad0f09f784c158a101c9245',
+          containerEl: '#fd-form-6ad0f09f784c158a101c9245'
+        });
+      </script>
+      <p class="fine">Free. Your email is only used to send the series and weekly encouragement. Unsubscribe anytime.</p>
+    </div>
+    <div class="door" role="img" aria-label="An open doorway filled with morning light"></div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>What you will receive</h2>
+      <p class="lead">Everything arrives by email, so you can begin when it feels safe and go as slowly as you need.</p>
+      <div class="get">
+        <div>
+          <h3>The video series</h3>
+          <p>Teaching that helps you name what happened, understand why it was so hard to see, and take the first steady steps toward freedom.</p>
+        </div>
+        <div>
+          <h3>Weekly emails</h3>
+          <p>A calm, encouraging note each week with the next step, so you are never left carrying this alone.</p>
+        </div>
+        <div>
+          <h3>Handouts</h3>
+          <p>Simple, printable pages to go with each lesson. Write on them, pray over them, and come back to them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mist">
+    <div class="wrap">
+      <h2>This series is for you if</h2>
+      <ul class="who">
+        <li>You keep asking yourself, "Is it me?"</li>
+        <li>You are walking on eggshells in a relationship</li>
+        <li>You have left, or are thinking about leaving</li>
+        <li>You feel confused about what forgiveness requires</li>
+        <li>You want healing that honors your faith</li>
+        <li>You are tired of being told to try harder</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap about">
+      <div>
+        <h2>Hi, I'm Kate.</h2>
+        <p>I am a Certified Abuse Recovery Coach with six years of experience walking alongside Christian women as they recover from painful relationships. I am also pursuing my graduate degree in Marriage and Family Therapy.</p>
+        <p>I built this series because I know how lonely the first steps can feel. My work is warm, faith-centered, and trauma-informed, and it starts from one truth: you are known, you are loved, and you are not too broken to heal.</p>
+      </div>
+      <div>
+        <h2>A note on safety</h2>
+        <p class="safety">If you are in immediate danger, please call 911. The National Domestic Violence Hotline is available 24/7 at 1-800-799-7233, or by text: start to 88788. Coaching and educational videos are not a substitute for emergency or clinical care.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="next">
+    <div class="wrap">
+      <h2>Ready when you are</h2>
+      <p>Your first step does not have to be big. Start with the free series and let the next step show itself.</p>
+      <a class="btn" href="#fd-form-6ad0f09f784c158a101c9245">Get First Steps to Freedom</a>
+      <p style="margin-top:2rem">Want to go deeper? First Steps to Freedom is also available as a 12-week journey toward healing from narcissistic abuse inside Refuge Community. If you would like to talk one-on-one, you can <a href="https://paperbell.me/knownandloved" style="color:#F0D58E">book a session with me</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; Known + Loved Coaching &middot; <a href="https://www.knownlovedcoaching.com">knownlovedcoaching.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
